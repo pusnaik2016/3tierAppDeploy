@@ -27,3 +27,13 @@ output "db_sg_id" {
   description = "Security group ID for the database tier"
   value       = aws_security_group.db_sg.id
 }
+
+output "igw_id" {
+  description = "The ID of the Internet Gateway"
+  value       = aws_internet_gateway.igw.id
+}
+
+output "public_route_table_id" {
+  description = "The ID of the public route table"
+  value       = aws_route_table.public.id
+}

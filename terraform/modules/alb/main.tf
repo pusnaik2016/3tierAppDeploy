@@ -4,6 +4,10 @@ resource "aws_lb" "web" {
   load_balancer_type = "application"
   security_groups    = var.security_groups
   subnets            = var.public_subnets
+  
+  tags = {
+    Name = "web-lb"
+  }
 }
 
 resource "aws_lb_target_group" "web" {

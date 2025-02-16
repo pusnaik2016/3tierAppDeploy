@@ -17,7 +17,7 @@ module "alb" {
 module "web" {
   source = "./modules/ec2"
 
-  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  ami           = "ami-053a45fff0a704a47" # Amazon Linux 2 AMI
   instance_type = "t2.micro"
   subnet_id     = module.vpc.public_subnets[0]
   security_groups = [module.vpc.web_sg_id]
@@ -27,7 +27,7 @@ module "web" {
 module "app" {
   source = "./modules/ec2"
 
-  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  ami           = "ami-053a45fff0a704a47" # Amazon Linux 2 AMI
   instance_type = "t2.micro"
   subnet_id     = module.vpc.private_subnets[0]
   security_groups = [module.vpc.app_sg_id]

@@ -61,7 +61,7 @@ resource "aws_security_group" "db_sg" {
 }
 
 #Create a security group
-resource "aws_security_group" "App_SG" {
+resource "aws_security_group" "app_sg" {
     #name = "App_SG"
     description = "Allow Web inbound traffic"
     vpc_id = aws_vpc.my_vpc.id

@@ -64,7 +64,7 @@ resource "aws_security_group" "db_sg" {
 resource "aws_security_group" "app_sg" {
     #name = "App_SG"
     description = "Allow Web inbound traffic"
-    vpc_id = aws_vpc.my_vpc.id
+    vpc_id = aws_vpc.main.id
     ingress  {
         protocol = "tcp"
         from_port = 80
